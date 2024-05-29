@@ -1,16 +1,22 @@
+:root {
+    --main-theme-color: darkred;
+    --main-bg-color: black;
+    --main-text-color: white;
+  }
+
 body {
     margin: 0;
 }
 
 h1 {
-    color: darkred;
+    color: var(--main-theme-color);
     font-size: 7rem;
     font-family: "Spirax", sans-serif;
 }
 
 p {
-    background-color: darkred;
-    color: white;
+    background-color: var(--main-theme-color);
+    color: var(--main-text-color);
     opacity: 0.7;
     font-size: 2rem;
     padding: 2rem;
@@ -22,19 +28,7 @@ p {
 .border {
     border-bottom: solid;
     border-bottom-width: 2rem;
-    border-color: darkred;
-}
-
-.hot {
-    background-image: url("assets/hot.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-color: var(--main-theme-color);
 }
 
 .first {
@@ -58,7 +52,7 @@ nav {
 ul {
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: var(--main-bg-color);
     height: 5rem;
     align-items: center;
     justify-content: center;
@@ -76,37 +70,25 @@ ul {
 }
 
 a {
-    color: white;
+    color: var(--main-text-color);
     text-decoration: none;
+}
+
+.hot {
+    background-image: url("assets/hot.jpg");
 }
 
 .juicy {
     background-image: url("assets/juicy.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .cozy {
     background-image: url("assets/cosy.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .sticky-header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     position: sticky; 
     top: 0;
     z-index: 100;
@@ -114,8 +96,8 @@ a {
 }
   
 table {
-    background-color: black;
-    color: white;
+    background-color: var(--main-bg-color);
+    color:var(--main-text-color);
     opacity: 0.7;
     font-size: 2rem;
     padding: 2rem;
@@ -125,4 +107,15 @@ table {
 
 tr > td:nth-child(2) {
     text-align: right;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
